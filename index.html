@@ -2,152 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Track Your Fitness Journey - Fitness Journal</title>
-  <meta name="description" content="Track your fitness progress with our journal. Log meals, workouts, and weekly reviews to stay motivated." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Food & Exercise Journal</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f9fa;
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f2f4f8;
+      padding: 0;
       color: #333;
     }
+
     header {
-      background: linear-gradient(135deg, #6C63FF, #8EC5FC);
+      background-color: #3aafa9;
       color: white;
-      padding: 2rem 1rem;
+      padding: 30px 15px;
       text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin: 0;
-    }
-    main.section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .feature {
-      background: white;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      flex: 1 1 250px;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: default;
-    }
-    .feature:hover {
-      box-shadow: 0 8px 30px rgba(108, 99, 255, 0.3);
-      transform: translateY(-5px);
-      cursor: pointer;
-    }
-    .feature span {
-      font-size: 2.5rem;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .feature h3 {
-      margin: 0.5rem 0;
-      font-size: 1.3rem;
-    }
-    .feature p {
-      font-size: 1rem;
-      color: #555;
-      margin: 0.5rem 0 0 0;
-    }
-    .cta {
-      text-align: center;
-      margin: 3rem 0 2rem;
-    }
-    .cta a {
-      background-color: #6C63FF;
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 5px 20px rgba(108,99,255,0.3);
-      transition: background 0.3s;
-      display: inline-block;
-    }
-    .cta a:hover {
-      background-color: #574fdf;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.95rem;
-      padding: 1rem;
-      color: #666;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-img {
+      max-width: 300px;
+      display: block;
+      margin: 0 auto 25px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #2b2e4a;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      background-color: #eafaf8;
+      padding: 20px;
+      border-left: 5px solid #3aafa9;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    .features ul {
+      padding-left: 20px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .cta a {
+      background-color: #3aafa9;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #2d9c95;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 20px;
+      color: #888;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
       }
-      header p {
-        font-size: 1rem;
-      }
-      .feature {
-        padding: 1rem;
-      }
-      .feature h3 {
-        font-size: 1.1rem;
-      }
-      .feature p {
-        font-size: 0.9rem;
-      }
-      .cta a {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
+
+      h1 {
+        font-size: 22px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Track Your Fitness Journey</h1>
-    <p>Simple. Effective. Designed for Real Progress.</p>
+    <h1>Track Your Fitness Goals With Confidence!</h1>
+    <p>Simple, effective & motivational – your ultimate fitness journal.</p>
   </header>
 
-  <main class="section" role="main">
-    <div class="features">
-      <div class="feature" tabindex="0" aria-label="Daily Meal Log">
-        <span>🥗</span>
-        <h3>Daily Meal Log</h3>
-        <p>Track what you eat every day to stay aware and focused on your goals.</p>
-      </div>
-      <div class="feature" tabindex="0" aria-label="Workout Tracker">
-        <span>🏋️‍♀️</span>
-        <h3>Workout Tracker</h3>
-        <p>Log your workouts, sets, and reps to follow your performance over time.</p>
-      </div>
-      <div class="feature" tabindex="0" aria-label="Weekly Review Pages">
-        <span>📅</span>
-        <h3>Weekly Review Pages</h3>
-        <p>Reflect on your week and make adjustments that keep you moving forward.</p>
-      </div>
-    </div>
-  </main>
+  <div class="container">
+    <img src="journal.jpg" alt="My Food and Exercise Journal" class="product-img" />
 
-  <div class="cta">
-    <a href="https://www.amazon.com/dp/B08B7KFFZQ" target="_blank" aria-label="Buy Now on Amazon">Buy Now on Amazon</a>
+    <h1>My Food & Exercise Journal</h1>
+    <p>Perfect for those who want to track daily workouts, meals, goals, and progress. Whether you're starting your fitness journey or staying on top of your routine, this notebook makes it easier to stay consistent and motivated.</p>
+
+    <div class="features">
+      <h3>📘 What's Inside:</h3>
+      <ul>
+        <li>Daily food & meal tracker</li>
+        <li>Workout logging sections</li>
+        <li>Progress & goals review</li>
+        <li>Motivational layout design</li>
+        <li>Handy, lightweight format</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <a href="https://www.amazon.com/My-food-exercise-journal-pages/dp/B08B7KFFZQ" target="_blank">
+        📘 Buy on Amazon
+      </a>
+    </div>
   </div>
 
   <footer>
-    &copy; 2025 My Fitness Journal. All rights reserved.
+    &copy; 2025 | My Fitness Journal Landing Page
   </footer>
+
 </body>
 </html>
